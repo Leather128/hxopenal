@@ -22,4 +22,4 @@ typedef ALshort = cpp.Int16;
 typedef ALubyte = cpp.UInt8;
 typedef ALbyte = cpp.Int8;
 typedef ALchar = cpp.Char;
-typedef ALboolean = cpp.Char;
+typedef ALboolean = Bool;

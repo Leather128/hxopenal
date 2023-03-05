@@ -21,28 +21,7 @@ class ALTests implements ITest {
 
 	public function new() {}
 
-	public function setup():Void {
-		device = ALC.openDevice(null);
-
-		if (device == null) {
-			trace('Failed to open an OpenAL device.');
-			Sys.exit(1);
-		}
-
-		context = ALC.createContext(device, null);
-
-		if (!ALC.makeContextCurrent(context)) {
-			context = null;
-			trace('Failed to create OpenAL context.');
-			Sys.exit(1);
-		}
-
-		var error:ALenum = AL.getError();
-
-		if (error != 0) {
-			trace(error);
-		}
-	}
+	public function setup():Void {}
 
 	public function testOpenDevice():Void {
 		device = ALC.openDevice();

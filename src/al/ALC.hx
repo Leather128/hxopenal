@@ -4,7 +4,6 @@ import cpp.Pointer;
 
 /**
  * Bindings for `include/AL/alc.h`.
- * 
  * @author Leather128
  */
 @:keep

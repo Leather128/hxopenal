@@ -2,7 +2,6 @@ package al;
 
 /**
  * Bindings for `include/AL/al.h`.
- * 
  * @author Leather128
  */
 @:keep

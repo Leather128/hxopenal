@@ -1,0 +1,26 @@
+<xml>
+	<set name="PROJECT_DIR" value="${this_dir}/../" />
+
+	<files id='haxe'>
+		<compilerflag value="-I ${PROJECT_DIR}vendor/openal/include/" />
+	</files>
+
+	<files id="__main__">
+		<compilerflag value="-I ${PROJECT_DIR}vendor/openal/include/" />
+	</files>
+
+	<target id="haxe">
+
+		<section if="windows">
+
+			<lib name='${PROJECT_DIR}vendor/openal/lib/windows/x64/OpenAL32.lib' if='HXCPP_M64' />
+			<lib name='${PROJECT_DIR}vendor/openal/lib/windows/x86/OpenAL32.lib' if='HXCPP_M32' />
+
+		</section>
+
+		<section if="linux">
+			<lib name="-lopenal" />
+		</section>
+
+	</target>
+</xml>

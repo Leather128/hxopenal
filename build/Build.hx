@@ -3,6 +3,12 @@ class Build {
 		#if sys
 		try {
 			sys.io.File.copy('bin/haxe/Main', 'bin/Main');
+			sys.FileSystem.deleteFile('bin/haxe/Main');
+
+			if (Sys.systemName() == 'Linux') {
+				Sys.command('chmod', ['+x', 'bin/Main']);
+			}
+
 			return;
 		} catch (error) {
 			trace('Error in copying executable file: ${error}');

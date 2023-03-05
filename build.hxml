@@ -1,7 +1,8 @@
 --class-path src
-
---cpp bin/
+--cpp bin/haxe/
 
 --dce full
+--library utest
 
---main al.Main
+--main Main
+--cmd haxe --class-path build -D analyzer-optimize -main Build --interp

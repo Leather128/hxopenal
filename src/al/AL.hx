@@ -89,13 +89,13 @@ extern class AL {
 	public static function isEnabled(capability:Int):ALboolean;
 
 	@:native('alDopplerFactor')
-	public static function dopplerFactor(value:Float):Void;
+	public static function dopplerFactor(value:Single):Void;
 
 	@:native('alDopplerVelocity')
-	public static function dopplerVelocity(value:Float):Void;
+	public static function dopplerVelocity(value:Single):Void;
 
 	@:native('alSpeedOfSound')
-	public static function speedOfSound(value:Float):Void;
+	public static function speedOfSound(value:Single):Void;
 
 	@:native('alDistanceModel')
 	public static function distanceModel(distanceModel:Int):Void;
@@ -104,16 +104,16 @@ extern class AL {
 	public static function getString(parameter:Int):String;
 
 	@:native('alGetBooleanv')
-	public static function getBooleanv(parameter:Int, value:cpp.Star<ALboolean>):Void;
+	public static function getBooleanv(parameter:Int, value:cpp.Pointer<ALboolean>):Void;
 
 	@:native('alGetIntegerv')
-	public static function getIntegerv(parameter:Int, value:cpp.Star<Int>):Void;
+	public static function getIntegerv(parameter:Int, value:cpp.Pointer<Int>):Void;
 
 	@:native('alGetFloatv')
-	public static function getFloatv(parameter:Int, value:cpp.Star<Float>):Void;
+	public static function getFloatv(parameter:Int, value:cpp.Pointer<Single>):Void;
 
 	@:native('alGetDoublev')
-	public static function getDoublev(parameter:Int, value:cpp.Star<Double>):Void;
+	public static function getDoublev(parameter:Int, value:cpp.Pointer<Double>):Void;
 
 	@:native('alGetBoolean')
 	public static function getBoolean(parameter:Int):ALboolean;
@@ -122,7 +122,7 @@ extern class AL {
 	public static function getInteger(parameter:Int):Int;
 
 	@:native('alGetFloat')
-	public static function getFloat(parameter:Int):Float;
+	public static function getFloat(parameter:Int):Single;
 
 	@:native('alGetDouble')
 	public static function getDouble(parameter:Int):Double;
@@ -131,19 +131,19 @@ extern class AL {
 	public static function isExtensionPresent(extension:String):ALboolean;
 
 	@:native('alGetProcAddress')
-	public static function getProcAddress(func:String):cpp.Star<Void>;
+	public static function getProcAddress(func:String):cpp.Pointer<Void>;
 
 	@:native('alGetEnumValue')
 	public static function getEnumValue(enumName:String):Int;
 
 	@:native('alListenerf')
-	public static function listenerf(parameter:Int, value:Float):Void;
+	public static function listenerf(parameter:Int, value:Single):Void;
 
 	@:native('alListener3f')
-	public static function listener3f(parameter:Int, value1:Float, value2:Float, value3:Float):Void;
+	public static function listener3f(parameter:Int, value1:Single, value2:Single, value3:Single):Void;
 
 	@:native('alListenerfv')
-	public static function listenerfv(parameter:Int, value:cpp.Star<Single>):Void;
+	public static function listenerfv(parameter:Int, value:cpp.Pointer<Single>):Void;
 
 	@:native('alListeneri')
 	public static function listeneri(parameter:Int, value:Int):Void;
@@ -152,25 +152,25 @@ extern class AL {
 	public static function listener3i(parameter:Int, value1:Int, value2:Int, value3:Int):Void;
 
 	@:native('alListeneriv')
-	public static function listeneriv(parameter:Int, value:cpp.Star<Any>):Void;
+	public static function listeneriv(parameter:Int, value:cpp.Pointer<Any>):Void;
 
 	@:native('alGetListenerf')
-	public static function getListenerf(parameter:Int, value:cpp.Star<Float>):Void;
+	public static function getListenerf(parameter:Int, value:cpp.Pointer<Single>):Void;
 
 	@:native('alGetListener3f')
-	public static function getListener3f(parameter:Int, value1:cpp.Star<Float>, value2:cpp.Star<Float>, value3:cpp.Star<Float>):Void;
+	public static function getListener3f(parameter:Int, value1:cpp.Pointer<Single>, value2:cpp.Pointer<Single>, value3:cpp.Pointer<Single>):Void;
 
 	@:native('alGetListenerfv')
-	public static function getListenerfv(parameter:Int, values:cpp.Star<Single>):Void;
+	public static function getListenerfv(parameter:Int, values:cpp.Pointer<Single>):Void;
 
 	@:native('alGetListeneri')
-	public static function getListeneri(parameter:Int, value:cpp.Star<Int>):Void;
+	public static function getListeneri(parameter:Int, value:cpp.Pointer<Int>):Void;
 
 	@:native('alGetListener3i')
-	public static function getListener3i(parameter:Int, value1:cpp.Star<Int>, value2:cpp.Star<Int>, value3:cpp.Star<Int>):Void;
+	public static function getListener3i(parameter:Int, value1:cpp.Pointer<Int>, value2:cpp.Pointer<Int>, value3:cpp.Pointer<Int>):Void;
 
 	@:native('alGetListeneriv')
-	public static function getListeneriv(parameter:Int, values:cpp.Star<Array<Int>>):Void;
+	public static function getListeneriv(parameter:Int, values:cpp.Pointer<Array<Int>>):Void;
 
 	@:native('alGenSources')
 	public static inline function genSources(n:Int, sources:Array<Int>):Void {
@@ -186,13 +186,13 @@ extern class AL {
 	public static function isSource(source:UInt):ALboolean;
 
 	@:native('alSourcef')
-	public static function sourcef(source:UInt, parameter:Int, value:Float):Void;
+	public static function sourcef(source:UInt, parameter:Int, value:Single):Void;
 
 	@:native('alSource3f')
-	public static function source3f(source:UInt, parameter:Int, value1:Float, value2:Float, value3:Float):Void;
+	public static function source3f(source:UInt, parameter:Int, value1:Single, value2:Single, value3:Single):Void;
 
 	@:native('alSourcefv')
-	public static function sourcefv(source:UInt, parameter:Int, values:cpp.Star<Array<Float>>):Void;
+	public static function sourcefv(source:UInt, parameter:Int, values:cpp.Pointer<Array<Single>>):Void;
 
 	@:native('alSourcei')
 	public static function sourcei(source:UInt, parameter:Int, value:Int):Void;
@@ -201,25 +201,25 @@ extern class AL {
 	public static function source3i(source:UInt, parameter:Int, value1:Int, value2:Int, value3:Int):Void;
 
 	@:native('alSourceiv')
-	public static function sourceiv(source:UInt, parameter:Int, values:cpp.Star<Array<Int>>):Void;
+	public static function sourceiv(source:UInt, parameter:Int, values:cpp.Pointer<Array<Int>>):Void;
 
 	@:native('alGetSourcef')
-	public static function getSourcef(source:UInt, parameter:Int, value:cpp.Star<Float>):Void;
+	public static function getSourcef(source:UInt, parameter:Int, value:cpp.Pointer<Single>):Void;
 
 	@:native('alGetSource3f')
-	public static function getSource3f(source:UInt, parameter:Int, value1:cpp.Star<Float>, value2:cpp.Star<Float>, value3:cpp.Star<Float>):Void;
+	public static function getSource3f(source:UInt, parameter:Int, value1:cpp.Pointer<Single>, value2:cpp.Pointer<Single>, value3:cpp.Pointer<Single>):Void;
 
 	@:native('alGetSourcefv')
-	public static function getSourcefv(source:UInt, parameter:Int, values:cpp.Star<Array<Float>>):Void;
+	public static function getSourcefv(source:UInt, parameter:Int, values:cpp.Pointer<Array<Single>>):Void;
 
 	@:native('alGetSourcei')
 	public static function getSourcei(source:UInt, parameter:Int, value:cpp.Pointer<Int>):Void;
 
 	@:native('alGetSource3i')
-	public static function getSource3i(source:UInt, parameter:Int, value1:cpp.Star<Int>, value2:cpp.Star<Int>, value3:cpp.Star<Int>):Void;
+	public static function getSource3i(source:UInt, parameter:Int, value1:cpp.Pointer<Int>, value2:cpp.Pointer<Int>, value3:cpp.Pointer<Int>):Void;
 
 	@:native('alGetSourceiv')
-	public static function getSourceiv(source:UInt, parameter:Int, values:cpp.Star<Array<Int>>):Void;
+	public static function getSourceiv(source:UInt, parameter:Int, values:cpp.Pointer<Array<Int>>):Void;
 
 	@:native('alSourcePlay')
 	public static function sourcePlay(source:UInt):Void;
@@ -234,22 +234,22 @@ extern class AL {
 	public static function sourcePause(source:UInt):Void;
 
 	@:native('alSourcePlayv')
-	public static function sourcePlayv(n:Int, sources:cpp.Star<UInt>):Void;
+	public static function sourcePlayv(n:Int, sources:cpp.Pointer<UInt>):Void;
 
 	@:native('alSourceStopv')
-	public static function sourceStopv(n:Int, sources:cpp.Star<UInt>):Void;
+	public static function sourceStopv(n:Int, sources:cpp.Pointer<UInt>):Void;
 
 	@:native('alSourceRewindv')
-	public static function sourceRewindv(n:Int, sources:cpp.Star<UInt>):Void;
+	public static function sourceRewindv(n:Int, sources:cpp.Pointer<UInt>):Void;
 
 	@:native('alSourcePausev')
-	public static function sourcePausev(n:Int, sources:cpp.Star<UInt>):Void;
+	public static function sourcePausev(n:Int, sources:cpp.Pointer<UInt>):Void;
 
 	@:native('alSourceQueueBuffers')
-	public static function sourceQueueBuffers(source:UInt, nb:Int, buffers:cpp.Star<UInt>):Void;
+	public static function sourceQueueBuffers(source:UInt, nb:Int, buffers:cpp.Pointer<UInt>):Void;
 
 	@:native('alSourceUnqueueBuffers')
-	public static function sourceUnqueueBuffers(source:UInt, nb:Int, buffers:cpp.Star<UInt>):Void;
+	public static function sourceUnqueueBuffers(source:UInt, nb:Int, buffers:cpp.Pointer<UInt>):Void;
 
 	@:native('alGenBuffers')
 	public static inline function genBuffers(n:Int, buffers:Array<Int>):Void {
@@ -272,13 +272,13 @@ extern class AL {
 	}
 
 	@:native('alBufferf')
-	public static function bufferf(buffer:UInt, parameter:Int, value:Float):Void;
+	public static function bufferf(buffer:UInt, parameter:Int, value:Single):Void;
 
 	@:native('alBuffer3f')
-	public static function buffer3f(buffer:UInt, parameter:Int, value1:Float, value2:Float, value3:Float):Void;
+	public static function buffer3f(buffer:UInt, parameter:Int, value1:Single, value2:Single, value3:Single):Void;
 
 	@:native('alBufferfv')
-	public static function bufferfv(buffer:UInt, parameter:Int, values:cpp.Star<Array<Float>>):Void;
+	public static function bufferfv(buffer:UInt, parameter:Int, values:cpp.Pointer<Array<Single>>):Void;
 
 	@:native('alBufferi')
 	public static function bufferi(buffer:UInt, parameter:Int, value:Int):Void;
@@ -287,25 +287,25 @@ extern class AL {
 	public static function buffer3i(buffer:UInt, parameter:Int, value1:Int, value2:Int, value3:Int):Void;
 
 	@:native('alBufferiv')
-	public static function bufferiv(buffer:UInt, parameter:Int, values:cpp.Star<Array<Int>>):Void;
+	public static function bufferiv(buffer:UInt, parameter:Int, values:cpp.Pointer<Array<Int>>):Void;
 
 	@:native('alGetBufferf')
-	public static function getBufferf(buffer:UInt, parameter:Int, value:cpp.Star<Float>):Void;
+	public static function getBufferf(buffer:UInt, parameter:Int, value:cpp.Pointer<Single>):Void;
 
 	@:native('alGetBuffer3f')
-	public static function getBuffer3f(buffer:UInt, parameter:Int, value1:cpp.Star<Float>, value2:cpp.Star<Float>, value3:cpp.Star<Float>):Void;
+	public static function getBuffer3f(buffer:UInt, parameter:Int, value1:cpp.Pointer<Single>, value2:cpp.Pointer<Single>, value3:cpp.Pointer<Single>):Void;
 
 	@:native('alGetBufferfv')
-	public static function getBufferfv(buffer:UInt, parameter:Int, values:cpp.Star<Array<Float>>):Void;
+	public static function getBufferfv(buffer:UInt, parameter:Int, values:cpp.Pointer<Array<Single>>):Void;
 
 	@:native('alGetBufferi')
-	public static function getBufferi(buffer:UInt, parameter:Int, value:cpp.Star<Int>):Void;
+	public static function getBufferi(buffer:UInt, parameter:Int, value:cpp.Pointer<Int>):Void;
 
 	@:native('alGetBuffer3i')
-	public static function getBuffer3i(buffer:UInt, parameter:Int, value1:cpp.Star<Int>, value2:cpp.Star<Int>, value3:cpp.Star<Int>):Void;
+	public static function getBuffer3i(buffer:UInt, parameter:Int, value1:cpp.Pointer<Int>, value2:cpp.Pointer<Int>, value3:cpp.Pointer<Int>):Void;
 
 	@:native('alGetBufferiv')
-	public static function getBufferiv(buffer:UInt, parameter:Int, values:cpp.Star<Array<Int>>):Void;
+	public static function getBufferiv(buffer:UInt, parameter:Int, values:cpp.Pointer<Array<Int>>):Void;
 }
 
 @:include('AL/hxal.h')

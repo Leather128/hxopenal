@@ -4,8 +4,7 @@ import al.AL;
 import al.ALC;
 
 class Sound {
-	public var data:haxe.io.BytesData;
-
+	private var _data:haxe.io.BytesData;
 	private var _buffer:Array<Int> = [];
 	private var _source:Array<Int> = [];
 
@@ -131,7 +130,9 @@ class Sound {
 						-1;
 				}
 
-				AL.bufferData(_buffer[0], format, wav.data.getData(), wav.data.length, wav.header.samplingRate);
+				_data = wav.data.getData();
+
+				AL.bufferData(_buffer[0], format, _data, wav.data.length, wav.header.samplingRate);
 				AL.genSources(1, _source);
 
 				// hardcoded shit (for now)
@@ -190,7 +191,7 @@ class Sound {
 			AL.deleteBuffers(1, _buffer[0]);
 		}
 
-		data = null;
+		_data = null;
 		_buffer = null;
 		_source = null;
 	}

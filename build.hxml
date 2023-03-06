@@ -1,9 +1,0 @@
---class-path src
---cpp bin/haxe/
-
---dce full
---library utest
---library format
-
---main tools.Test
---cmd haxe --class-path build -D analyzer-optimize -main Build --interp

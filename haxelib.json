@@ -14,9 +14,5 @@
 	"releasenote": "Work in progress.",
 	"contributors": [
 		"Leather128"
-	],
-	"dependencies": {
-		"format": "",
-		"utest": ""
-	}
+	]
 }

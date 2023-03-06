@@ -1,5 +1,6 @@
 --class-path src
 --cpp bin/
 --library hxopenal
+--library format
 --dce full
 --main Main

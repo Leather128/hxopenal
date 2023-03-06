@@ -1,11 +1,11 @@
-package;
+package tools;
 
 import al.ALC;
 import al.AL;
 import utest.Assert;
 import utest.ITest;
 
-class Main {
+class Test {
 	public static function main():Void {
 		var runner:utest.Runner = new utest.Runner();
 		utest.ui.Report.create(runner);

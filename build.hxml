@@ -5,5 +5,5 @@
 --library utest
 --library format
 
---main Main
+--main tools.Test
 --cmd haxe --class-path build -D analyzer-optimize -main Build --interp

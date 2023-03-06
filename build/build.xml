@@ -2,11 +2,11 @@
 	<set name="PROJECT_DIR" value="${this_dir}/../" />
 
 	<files id='haxe'>
-		<compilerflag value="-I ${PROJECT_DIR}vendor/openal/include/" />
+		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include/" />
 	</files>
 
 	<files id="__main__">
-		<compilerflag value="-I ${PROJECT_DIR}vendor/openal/include/" />
+		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include/" />
 	</files>
 
 	<target id="haxe">
@@ -19,7 +19,9 @@
 		</section>
 
 		<section if="linux">
+
 			<lib name="-lopenal" />
+
 		</section>
 
 	</target>

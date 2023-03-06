@@ -16,6 +16,7 @@
 		"Leather128"
 	],
 	"dependencies": {
+		"format": "",
 		"utest": ""
 	},
 	"main": "Main"

@@ -3,6 +3,7 @@
 
 --dce full
 --library utest
+--library format
 
 --main Main
 --cmd haxe --class-path build -D analyzer-optimize -main Build --interp

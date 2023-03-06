@@ -13,8 +13,17 @@
 
 		<section if="windows">
 
-			<lib name='${PROJECT_DIR}vendor/openal/lib/windows/x64/OpenAL32.lib' unless='HXCPP_M32' />
-			<lib name='${PROJECT_DIR}vendor/openal/lib/windows/x86/OpenAL32.lib' if='HXCPP_M32' />
+			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x86" unless="HXCPP_M64" />
+			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x64" if="HXCPP_M64" />
+
+			<lib name="OpenAL32.lib" />
+
+			<copyFile name="soft_oal.dll" from="${PROJECT_DIR}vendor/openal/lib/windows/x86"
+				unless="HXCPP_M64" />
+			<copyFile name="soft_oal.dll" from="${PROJECT_DIR}vendor/openal/lib/windows/x64"
+				if="HXCPP_M64" />
+
+			<copyFile name="OpenAL32.dll" from="${PROJECT_DIR}vendor/openal/lib/windows" />
 
 		</section>
 

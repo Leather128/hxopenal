@@ -1,5 +1,5 @@
 <xml>
-	<set name="PROJECT_DIR" value="${this_dir}/../" />
+	<set name="PROJECT_DIR" value="${this_dir}" />
 
 	<files id='haxe'>
 		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include/" />

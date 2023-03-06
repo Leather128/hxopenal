@@ -10,16 +10,4 @@ This library only works with the Haxe cpp target.
 
 ## Example Usage
 
-See `demo/Main.hx` for more information.
-
-```haxe
-
-package;
-
-class Main {
-    public static function main():Void {
-        trace('Hello, World!');
-    }
-}
-
-```
+See the demo folder for examples and demos on how to use the library in certain ways.

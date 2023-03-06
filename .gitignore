@@ -3,3 +3,6 @@
 
 # haxe stuff
 bin/*
+
+# demos
+demo/*/bin/*

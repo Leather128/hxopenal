@@ -8,7 +8,7 @@ import cpp.Pointer;
  * @author Leather128
  */
 @:keep
-@:buildXml('<include name="${haxelib:hxopenal}/build/build.xml" />')
+@:buildXml('<include name="${haxelib:hxopenal}/include.xml" />')
 @:include('AL/alc.h')
 extern class ALC {
 	// defines //

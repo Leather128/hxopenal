@@ -10,4 +10,4 @@ This library only works with the Haxe cpp target.
 
 ## Example Usage
 
-See the demo folder for examples and demos on how to use the library in certain ways.
+See the [demo folder](demo/) for examples and demos on how to use the library in certain ways.

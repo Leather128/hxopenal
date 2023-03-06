@@ -18,6 +18,5 @@
 	"dependencies": {
 		"format": "",
 		"utest": ""
-	},
-	"main": "Main"
+	}
 }

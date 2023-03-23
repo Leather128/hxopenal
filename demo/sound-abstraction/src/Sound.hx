@@ -206,7 +206,10 @@ class SoundSystem {
 		if (initialized)
 			return;
 
-		device = ALC.openDevice();
+		var defaultDevice:String = ALC.getString(null, ALC.DEFAULT_DEVICE_SPECIFIER);
+		trace(defaultDevice);
+
+		device = ALC.openDevice(defaultDevice);
 
 		if (device == null) {
 			trace('Failed to open an OpenAL device.');

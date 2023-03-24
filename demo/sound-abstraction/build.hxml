@@ -4,4 +4,6 @@
 --library format
 --dce full
 -D HXCPP_M64
+-D analyzer-optimize
 --main Main
+--cmd haxe --class-path build -D analyzer-optimize -main Build --interp

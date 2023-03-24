@@ -13,10 +13,7 @@
 
 		<section if="windows">
 
-			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x86" if="HXCPP_M32" />
-			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x64" unless="HXCPP_M32" />
-
-			<!-- <lib name="soft_oal.dll" /> -->
+			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x64" />
 			<lib name="OpenAL32.lib" />
 
 		</section>

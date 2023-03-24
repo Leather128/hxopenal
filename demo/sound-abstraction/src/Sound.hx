@@ -236,7 +236,7 @@ class SoundSystem {
 			0, 1, 0,
 		];
 
-		AL.listenerfv(AL.ORIENTATION, cast cpp.NativeArray.address(orientationVectors, 0));
+		AL.listenerfv(AL.ORIENTATION, cpp.NativeArray.address(orientationVectors, 0));
 
 		initialized = true;
 	}

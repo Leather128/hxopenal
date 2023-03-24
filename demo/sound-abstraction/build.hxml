@@ -3,4 +3,5 @@
 --library hxopenal
 --library format
 --dce full
+-D HXCPP_M64
 --main Main

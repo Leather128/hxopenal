@@ -207,8 +207,6 @@ class SoundSystem {
 			return;
 
 		var defaultDevice:String = ALC.getString(null, ALC.DEFAULT_DEVICE_SPECIFIER);
-		trace(defaultDevice);
-
 		device = ALC.openDevice(defaultDevice);
 
 		if (device == null) {

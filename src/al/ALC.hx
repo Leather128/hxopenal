@@ -43,13 +43,13 @@ extern class ALC {
 	public static function openDevice(?deviceName:String):Device;
 
 	@:native('alcCloseDevice')
-	public static function closeDevice(device:Device):ALboolean;
+	public static function closeDevice(device:Device):Bool;
 
 	@:native('alcCreateContext')
 	public static function createContext(device:Device, ?attributeList:Int):Context;
 
 	@:native('alcMakeContextCurrent')
-	public static function makeContextCurrent(context:Context):ALboolean;
+	public static function makeContextCurrent(context:Context):Bool;
 
 	@:native('alcProcessContext')
 	public static function processContext(context:Context):Void;
@@ -70,7 +70,7 @@ extern class ALC {
 	public static function getError(device:Device):Int;
 
 	@:native('alcIsExtensionPresent')
-	public static function isExtensionPresent(device:Device, extension:String):ALboolean;
+	public static function isExtensionPresent(device:Device, extension:String):Bool;
 
 	@:native('alcGetProcAddress')
 	public static function getProcAddress(device:Device, func:String):cpp.Pointer<Void>;
@@ -88,7 +88,7 @@ extern class ALC {
 	public static function captureOpenDevice(deviceName:String, frequency:UInt, format:Int, bufferSize:Int):Device;
 
 	@:native('alcCaptureCloseDevice')
-	public static function captureCloseDevice(device:Device):ALboolean;
+	public static function captureCloseDevice(device:Device):Bool;
 
 	@:native('alcCaptureStart')
 	public static function captureStart(device:Device):Void;

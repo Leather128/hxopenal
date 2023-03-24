@@ -86,7 +86,7 @@ extern class AL {
 	public static function disable(capability:Int):Void;
 
 	@:native('alIsEnabled')
-	public static function isEnabled(capability:Int):ALboolean;
+	public static function isEnabled(capability:Int):Bool;
 
 	@:native('alDopplerFactor')
 	public static function dopplerFactor(value:Single):Void;
@@ -104,7 +104,7 @@ extern class AL {
 	public static function getString(parameter:Int):String;
 
 	@:native('alGetBooleanv')
-	public static function getBooleanv(parameter:Int, value:cpp.Pointer<ALboolean>):Void;
+	public static function getBooleanv(parameter:Int, value:cpp.Pointer<Bool>):Void;
 
 	@:native('alGetIntegerv')
 	public static function getIntegerv(parameter:Int, value:cpp.Pointer<Int>):Void;
@@ -116,7 +116,7 @@ extern class AL {
 	public static function getDoublev(parameter:Int, value:cpp.Pointer<Double>):Void;
 
 	@:native('alGetBoolean')
-	public static function getBoolean(parameter:Int):ALboolean;
+	public static function getBoolean(parameter:Int):Bool;
 
 	@:native('alGetInteger')
 	public static function getInteger(parameter:Int):Int;
@@ -128,7 +128,7 @@ extern class AL {
 	public static function getDouble(parameter:Int):Double;
 
 	@:native('alIsExtensionPresent')
-	public static function isExtensionPresent(extension:String):ALboolean;
+	public static function isExtensionPresent(extension:String):Bool;
 
 	@:native('alGetProcAddress')
 	public static function getProcAddress(func:String):cpp.Pointer<Void>;
@@ -183,7 +183,7 @@ extern class AL {
 	};
 
 	@:native('alIsSource')
-	public static function isSource(source:UInt):ALboolean;
+	public static function isSource(source:UInt):Bool;
 
 	@:native('alSourcef')
 	public static function sourcef(source:UInt, parameter:Int, value:Single):Void;
@@ -262,7 +262,7 @@ extern class AL {
 	};
 
 	@:native('alIsBuffer')
-	public static function isBuffer(buffer:UInt):ALboolean;
+	public static function isBuffer(buffer:UInt):Bool;
 
 	@:native('alBufferData')
 	private static function alBufferData(buffer:Int, format:Int, data:cpp.Pointer<cpp.UInt8>, size:Int, sampleRate:Int):Void;
@@ -318,4 +318,3 @@ extern class HxAL {
 }
 
 typedef Double = cpp.Float64;
-typedef ALboolean = Bool;

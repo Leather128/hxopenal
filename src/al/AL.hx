@@ -172,15 +172,13 @@ extern class AL {
 	@:native('alGetListeneriv')
 	static function getListeneriv(parameter:Int, values:cpp.Pointer<Array<Int>>):Void;
 
-	@:native('alGenSources')
 	static inline function genSources(n:Int, sources:Array<Int>):Void {
 		untyped __cpp__('alGenSources({0}, (unsigned int*)&({1}[0]))', n, sources);
 	}
 
-	@:native('alDeleteSources')
-	public inline static function deleteSources(n:Int, source:cpp.UInt32):Void {
+	static inline function deleteSources(n:Int, source:cpp.UInt32):Void {
 		HxAL.deleteSources(n, source);
-	};
+	}
 
 	@:native('alIsSource')
 	static function isSource(source:cpp.UInt32):Bool;
@@ -251,15 +249,13 @@ extern class AL {
 	@:native('alSourceUnqueueBuffers')
 	static function sourceUnqueueBuffers(source:cpp.UInt32, nb:Int, buffers:cpp.Pointer<cpp.UInt32>):Void;
 
-	@:native('alGenBuffers')
 	static inline function genBuffers(n:Int, buffers:Array<Int>):Void {
 		untyped __cpp__('alGenBuffers({0}, (unsigned int*)&({1}[0]))', n, buffers);
 	}
 
-	@:native('alDeleteBuffers')
-	public inline static function deleteBuffers(n:Int, buffer:cpp.UInt32):Void {
+	static inline function deleteBuffers(n:Int, buffer:cpp.UInt32):Void {
 		HxAL.deleteBuffers(n, buffer);
-	};
+	}
 
 	@:native('alIsBuffer')
 	static function isBuffer(buffer:cpp.UInt32):Bool;

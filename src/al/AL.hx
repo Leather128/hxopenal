@@ -265,7 +265,7 @@ extern class AL {
 	static function isBuffer(buffer:cpp.UInt32):Bool;
 
 	@:native('alBufferData')
-	private static function alBufferData(buffer:Int, format:Int, data:cpp.Pointer<cpp.cpp.UInt328>, size:Int, sampleRate:Int):Void;
+	private static function alBufferData(buffer:Int, format:Int, data:cpp.Pointer<cpp.UInt8>, size:Int, sampleRate:Int):Void;
 
 	static inline function bufferData(buffer:Int, format:Int, data:haxe.io.BytesData, size:Int, sampleRate:Int):Void {
 		alBufferData(buffer, format, cpp.Pointer.arrayElem(data, 0), size, sampleRate);

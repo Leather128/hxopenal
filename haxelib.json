@@ -6,7 +6,8 @@
 		"sound",
 		"openal",
 		"cpp",
-		"audio"
+		"audio",
+		"native"
 	],
 	"description": "This library provides bindings for using the OpenAL (specifically OpenAL Soft) audio library in a Haxe project.",
 	"version": "0.0.1",

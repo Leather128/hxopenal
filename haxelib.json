@@ -1,6 +1,6 @@
 {
 	"name": "hxopenal",
-	"url": "https://github.com/Leather128/hxopenal/",
+	"url": "https://github.com/Leather128/hxopenal.git",
 	"license": "GPL",
 	"tags": [
 		"sound",
@@ -10,13 +10,14 @@
 		"native"
 	],
 	"description": "This library provides bindings for using the OpenAL (specifically OpenAL Soft) audio library in a Haxe project.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"classPath": "src/",
-	"releasenote": "Work in progress.",
+	"releasenote": "Initial release.",
 	"contributors": [
-		"Leather128"
+		"Leather128",
+		"MAJigsaw77"
 	],
-	"dependencies":{
-		"hxcpp":""
+	"dependencies": {
+		"hxcpp": ""
 	}
 }

@@ -17,8 +17,8 @@ jobs:
         with:
           haxe-version: 4.3.0
 
-      # - name: Installing Dependencies
-        # run: sudo apt-get install libopenal-dev
+      - name: Installing Dependencies
+        run: sudo apt-get install libopenal-dev
 
       - name: Compiling 
         run: |

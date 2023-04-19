@@ -17,6 +17,10 @@ jobs:
         with:
           haxe-version: 4.3.0
 
+      - name: Installing Dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get install libopenal-dev
+
       - name: Compiling 
         run: |
           haxelib --quiet git hxopenal https://github.com/MAJigsaw77/hxopenal.git

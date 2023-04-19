@@ -1,9 +1,9 @@
---class-path src
---cpp bin/
---library hxopenal
---library format
---dce full
+-cp src
 -D HXCPP_M64
 -D analyzer-optimize
---main Main
---cmd haxe --class-path build -D analyzer-optimize -main Build --interp
+-lib hxopenal
+-lib format
+-main Main
+-cpp bin
+-cmd cp "sneaky.wav" "bin/sneaky.wav"
+-cmd bin/Main

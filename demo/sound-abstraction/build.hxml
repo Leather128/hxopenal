@@ -5,5 +5,5 @@
 -lib format
 -main Main
 -cpp bin
--cmd cp "sneaky.wav" "bin/sneaky.wav"
+-cmd cp sneaky.wav bin/sneaky.wav
 -cmd bin/Main

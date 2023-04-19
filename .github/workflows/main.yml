@@ -1,0 +1,28 @@
+name: Testing
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          submodules: true
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.0
+
+      - name: Installing Dependencies
+        run: sudo apt-get install libopenal-dev
+
+      - name: Compiling 
+        run: |
+          haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
+          haxelib --quiet install format
+          cd demo/sound-abstraction
+          haxe build.hxml

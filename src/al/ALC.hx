@@ -1,8 +1,5 @@
 package al;
 
-import al.AL;
-import cpp.Pointer;
-
 /**
  * Bindings for `include/AL/alc.h`.
  * @author Leather128

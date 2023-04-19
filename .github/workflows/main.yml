@@ -1,0 +1,24 @@
+name: Testing
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          submodules: true
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.0
+
+      - name: Compiling 
+        run: |
+          haxelib --quiet git hxopenal https://github.com/MAJigsaw77/hxopenal.git
+          cd demo/sound-abstraction
+          haxe build.hxml

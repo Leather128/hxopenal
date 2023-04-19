@@ -14,8 +14,7 @@
 	"classPath": "src/",
 	"releasenote": "Initial release.",
 	"contributors": [
-		"Leather128",
-		"MAJigsaw77"
+		"Leather128"
 	],
 	"dependencies": {
 		"hxcpp": ""

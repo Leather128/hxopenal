@@ -13,11 +13,6 @@
 		<section if="windows">
 			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x64" />
 			<lib name="OpenAL32.lib" /> 
-		</section> 
-
-		<section if="macos">
-			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/Mac/x64" />
-			<lib name="libopenal.a" /> 
 		</section>
 
 		<section if="macos || iphoneos || iphonesim">

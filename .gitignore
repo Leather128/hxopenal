@@ -5,4 +5,7 @@
 bin/*
 
 # demos
-demo/*/bin/*
+demo/*/bin/* 
+
+#ds store 
+.DS_Store

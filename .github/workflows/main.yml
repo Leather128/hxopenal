@@ -20,5 +20,6 @@ jobs:
       - name: Compiling 
         run: |
           haxelib --quiet git hxopenal https://github.com/MAJigsaw77/hxopenal.git
+          haxelib --quiet install format
           cd demo/sound-abstraction
           haxe build.hxml

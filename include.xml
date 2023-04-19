@@ -1,17 +1,21 @@
 <xml>
+	<pragma once="true" />
+
 	<set name="PROJECT_DIR" value="${this_dir}/" />
 
 	<files id='haxe'>
-		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include/" />
+		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include" />
 	</files>
 
 	<files id="__main__">
-		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include/" />
+		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include" />
 	</files>
+
+	<copyFile name="OpenAL32.dll" from="${PROJECT_DIR}vendor/openal/lib/windows/x64" toolId="exe" overwrite="true" if="windows" />
 
 	<target id="haxe">
 		<section if="windows">
-			<flag value="-libpath:${PROJECT_DIR}vendor/openal/lib/windows/x64" />
+			<libpath name="${PROJECT_DIR}vendor/openal/lib/windows/x64" if="windows" />
 			<lib name="OpenAL32.lib" />
 		</section>
 

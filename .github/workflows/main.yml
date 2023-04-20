@@ -22,12 +22,13 @@ jobs:
           haxe-version: 4.3.0
 
       - name: Installing Dependencies
-        run: sudo apt-get install libopenal-dev
+        run: |
+          sudo apt-get install libopenal-dev
+          haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
+          haxelib --quiet install format
 
       - name: Building
         run: |
-          haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
-          haxelib --quiet install format
           cd demo/sound-abstraction
           haxe build.hxml
 
@@ -44,10 +45,13 @@ jobs:
         with:
           haxe-version: 4.3.0
 
-      - name: Building
+      - name: Installing Dependencies
         run: |
           haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
           haxelib --quiet install format
+
+      - name: Building
+        run: |
           cd demo/sound-abstraction
           haxe build.hxml
 
@@ -64,9 +68,12 @@ jobs:
         with:
           haxe-version: 4.3.0
 
-      - name: Building
+      - name: Installing Dependencies
         run: |
           haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
           haxelib --quiet install format
+
+      - name: Building
+        run: |
           cd demo/sound-abstraction
           haxe build.hxml

@@ -52,11 +52,6 @@ jobs:
           haxelib --quiet install format
           cd demo/sound-abstraction
           haxe build.hxml
-      - name: Publish Artifact
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: test-win
-          path: demo/sound-abstraction/bin
   Mac:
     runs-on: macos-latest
     steps:

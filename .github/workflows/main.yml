@@ -46,9 +46,6 @@ jobs:
         with:
           haxe-version: 4.3.0
 
-      - name: Installing Dependencies
-        run: sudo apt-get install libopenal-dev
-
       - name: Compiling 
         run: |
           haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
@@ -72,9 +69,6 @@ jobs:
         uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.3.0
-
-      - name: Installing Dependencies
-        run: sudo apt-get install libopenal-dev
 
       - name: Compiling 
         run: |

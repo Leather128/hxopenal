@@ -33,30 +33,6 @@ jobs:
         with:
           name: test-linux
           path: demo/sound-abstraction/bin
-  Windows:
-    runs-on: windows-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@main
-        with:
-          submodules: true
-
-      - name: Setup Haxe
-        uses: krdlab/setup-haxe@master
-        with:
-          haxe-version: 4.3.0
-
-      - name: Compiling 
-        run: |
-          haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
-          haxelib --quiet install format
-          cd demo/sound-abstraction
-          haxe build.hxml
-      - name: Publish Artifact
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: test-windows
-          path: demo/sound-abstraction/bin
   Mac:
     runs-on: macos-latest
     steps:

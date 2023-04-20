@@ -27,10 +27,17 @@ jobs:
           haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
           haxelib --quiet install format
 
-      - name: Building
+      - name: Building Demo 1
         run: |
-          cd demo/sound-abstraction
+          cd demo/basic-audio-playback
           haxe build.hxml
+          cd ../../
+
+      - name: Building Demo 2
+        run: |
+          cd demo/audio-position-shifting
+          haxe build.hxml
+          cd ../../
 
   Windows:
     runs-on: windows-latest
@@ -50,10 +57,17 @@ jobs:
           haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
           haxelib --quiet install format
 
-      - name: Building
+      - name: Building Demo 1
         run: |
-          cd demo/sound-abstraction
+          cd demo/basic-audio-playback
           haxe build.hxml
+          cd ../../
+
+      - name: Building Demo 2
+        run: |
+          cd demo/audio-position-shifting
+          haxe build.hxml
+          cd ../../
 
   MacOS:
     runs-on: macos-latest
@@ -73,7 +87,14 @@ jobs:
           haxelib --quiet git hxopenal https://github.com/Leather128/hxopenal.git
           haxelib --quiet install format
 
-      - name: Building
+      - name: Building Demo 1
         run: |
-          cd demo/sound-abstraction
+          cd demo/basic-audio-playback
           haxe build.hxml
+          cd ../../
+
+      - name: Building Demo 2
+        run: |
+          cd demo/audio-position-shifting
+          haxe build.hxml
+          cd ../../

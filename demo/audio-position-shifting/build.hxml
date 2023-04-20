@@ -1,0 +1,8 @@
+-cp src
+-D HXCPP_M64
+-D analyzer-optimize
+-lib hxopenal
+-lib format
+-main Main
+-cpp bin
+-cmd cp song.wav bin/song.wav

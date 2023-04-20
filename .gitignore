@@ -1,11 +1,8 @@
 # hidden folders
 .vscode/*
 
-# haxe stuff
-bin/*
-
-# demos
+# building stuff
 demo/*/bin/* 
 
-#ds store 
+# macos
 .DS_Store

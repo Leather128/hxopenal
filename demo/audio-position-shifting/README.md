@@ -1,6 +1,6 @@
 # audio-position-shifting
 
-This is a demo of the library that plays one wav file and changes the position of the playback to sound like it's in a different position (most effective on headphones). The code that does the position shifting can be found in both Main.hx and Sound.hx (using the sound abstraction system from [basic-audio-playback](https://github.com/Leather128/hxopenal/tree/main/demo/basic-audio-playback))
+This is a demo of the library that plays one wav file and changes the position of the playback to sound like it's in a different position (most effective on headphones). The code that does the position shifting can be found in both Main.hx and Sound.hx (using the sound abstraction system from [basic-audio-playback](https://github.com/Leather128/hxopenal/tree/main/demo/basic-audio-playback)).
 
 ## Usage
 

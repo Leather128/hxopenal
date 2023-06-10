@@ -24,4 +24,4 @@ haxelib git hxopenal https://github.com/Leather128/hxopenal.git
 
 ## Example Usage
 
-See the [demo folder](https://github.com/Leather128/hxopenal/tree/main/demo) for examples and demos on how to use the library in certain ways.
+See the [Demo Folder](https://github.com/Leather128/hxopenal/tree/main/demo) for examples / demos that you can use to understand how to use the library.

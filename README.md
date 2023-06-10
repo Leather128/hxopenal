@@ -10,8 +10,17 @@ This library only works with the Haxe cpp target via hxcpp.
 
 ## Installation
 
-- Either install the mod via `haxelib install hxopenal` for the latest release or `haxelib git hxopenal https://github.com/Leather128/hxopenal.git` for the latest possible version.
-- For now that's it.
+Install through the haxelib
+
+```
+haxelib install hxopenal
+```
+
+or with git for the latest updates.
+
+```
+haxelib git hxopenal https://github.com/Leather128/hxopenal.git
+```
 
 ## Example Usage
 

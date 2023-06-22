@@ -11,7 +11,8 @@
 		<compilerflag value="-I${PROJECT_DIR}vendor/openal/include" />
 	</files>
 
-	<copyFile name="OpenAL32.dll" from="${PROJECT_DIR}vendor/openal/lib/windows/x64" toolId="exe" overwrite="true" if="windows" />
+	<copyFile name="OpenAL32.dll" from="${PROJECT_DIR}vendor/openal/lib/windows/x64" toolId="exe"
+		overwrite="true" if="windows" />
 
 	<target id="haxe">
 		<section if="windows">
